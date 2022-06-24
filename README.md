@@ -4,16 +4,10 @@ Currently supports Protanopia, Deuteranopia and Tritanopia. Works with images, v
 
 ![Screenshot](Screenshots/Square4x4.jpg)
 
+As of 6/24/22, this extension has been manually reviewed and approved by Google and is now published.
 
-At the moment, this extension is pending review to be published to the Chrome Web Store.
+https://chrome.google.com/webstore/detail/colourblind-simulation-to/pngbanndhojopblfnihndgmflmohepom
 
-
-However, you can still **use this extension by** :
-
-  **1.** Extracting the Colourblind-Simulator-Developer-Tool-Chrome-Extension-master.zip file. <br />
-  **2.** Going to chrome://extensions and enabling Developer Mode (Top right button). <br />
-  **3.** Clicking on "Load unpacked" and uploading the Colourblind-Simulator-Developer-Tool-Chrome-Extension-master folder that is inside the Colourblind-Simulator-              Developer-Tool-Chrome-Extension-master folder. <br />
-  
 
 
 
