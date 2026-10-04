@@ -46,3 +46,23 @@ tritanopiaButton.addEventListener("click", async () => {
         function: loadFilter,
     });
 })
+
+//Highlight the active mode
+const modeButtons = document.querySelectorAll("button[data-mode]");
+
+function highlightActive(modes) {
+    modeButtons.forEach((button) => {
+        button.classList.toggle("active", !!modes[button.dataset.mode]);
+    });
+}
+
+modeButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+        highlightActive({[button.dataset.mode]: true});
+    });
+});
+
+chrome.storage.sync.get(["defaultMode", "protanopiaMode", "deuteranopiaMode", "tritanopiaMode"], (modes) => {
+    if (!Object.values(modes).some(Boolean)) modes = {defaultMode: true};
+    highlightActive(modes);
+});

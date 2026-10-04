@@ -1,0 +1,131 @@
+:root {
+    --bg: #ffffff;
+    --surface: #f3f4f8;
+    --surface-hover: #e8eaf3;
+    --text: #1f2330;
+    --muted: #6b7185;
+    --accent: #5b5bd6;
+    --accent-text: #ffffff;
+    --border: #dcdfea;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #181a22;
+        --surface: #23263a;
+        --surface-hover: #2d3150;
+        --text: #eceef7;
+        --muted: #9aa0b8;
+        --accent: #7c7cf0;
+        --accent-text: #11121a;
+        --border: #343852;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 280px;
+    margin: 0;
+    padding: 16px;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+
+header {
+    margin-bottom: 14px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+p.subtitle {
+    margin: 2px 0 0;
+    font-size: 12px;
+    color: var(--muted);
+}
+
+.modes {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--surface);
+    color: var(--text);
+    font: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: left;
+    cursor: pointer;
+    transition: background 0.15s, border-color 0.15s, transform 0.05s;
+}
+
+button:hover {
+    background: var(--surface-hover);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+button:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+}
+
+button small {
+    display: block;
+    font-size: 11px;
+    font-weight: 400;
+    color: var(--muted);
+}
+
+button.active {
+    border-color: var(--accent);
+    background: var(--accent);
+    color: var(--accent-text);
+}
+
+button.active small {
+    color: inherit;
+    opacity: 0.85;
+}
+
+.swatch {
+    flex: none;
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+#defaultButton .swatch {
+    background: linear-gradient(135deg, #e5484d, #f5d90a, #30a46c, #3e63dd);
+}
+
+#protanopiaButton .swatch {
+    background: linear-gradient(135deg, #8a7a2c, #c9b84a, #4a6fa5, #2f4f8f);
+}
+
+#deuteranopiaButton .swatch {
+    background: linear-gradient(135deg, #a08a3a, #d4c060, #6d7aa8, #3a4f8a);
+}
+
+#tritanopiaButton .swatch {
+    background: linear-gradient(135deg, #e5484d, #e08a9a, #2fa4a0, #3a6f78);
+}

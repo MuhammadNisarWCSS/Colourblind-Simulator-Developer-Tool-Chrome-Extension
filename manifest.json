@@ -1,7 +1,7 @@
 {
     "name": "ColourBlind Simulation tool for developers",
     "description": "Allows web developers to experience their website through the perspective of colourblind individuals. Works for any website.",
-    "version": "0.0.0.1",
+    "version": "1.0.0",
     "manifest_version": 3,
     "icons": {
     },

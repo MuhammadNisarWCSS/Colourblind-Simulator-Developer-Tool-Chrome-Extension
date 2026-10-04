@@ -1,13 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
+        <meta charset="utf-8">
+        <title>Colourblind Simulator</title>
         <link rel="stylesheet" href="popup.css">
     </head>
     <body>
-        <button id="defaultButton">Default</button>
-        <button id="protanopiaButton">Protanopia</button>
-        <button id="deuteranopiaButton">Deuteranopia</button>
-        <button id="tritanopiaButton">Tritanopia</button>
+        <header>
+            <h1>Colourblind Simulator</h1>
+            <p class="subtitle">Preview this page as others see it</p>
+        </header>
+        <div class="modes">
+            <button id="defaultButton" data-mode="defaultMode">
+                <span class="swatch"></span>
+                <span>Default<small>Normal colour vision</small></span>
+            </button>
+            <button id="protanopiaButton" data-mode="protanopiaMode">
+                <span class="swatch"></span>
+                <span>Protanopia<small>Red-blind</small></span>
+            </button>
+            <button id="deuteranopiaButton" data-mode="deuteranopiaMode">
+                <span class="swatch"></span>
+                <span>Deuteranopia<small>Green-blind</small></span>
+            </button>
+            <button id="tritanopiaButton" data-mode="tritanopiaMode">
+                <span class="swatch"></span>
+                <span>Tritanopia<small>Blue-blind</small></span>
+            </button>
+        </div>
         <script src="popup.js"></script>
         <script src="filter.js"></script>
     </body>
